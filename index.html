@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Taskly — To Do</title>
 
 <style>
@@ -498,4 +499,12 @@ select.form-control {
 </main>
 
 </body>
+<script>
+    const tg = window.Telegram.WebApp;
+
+    tg.ready();
+
+    console.log("Telegram подключён:", !!tg);
+    console.log("initData получен:", !!tg.initData);
+</script>
 </html>
